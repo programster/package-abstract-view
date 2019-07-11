@@ -1,0 +1,24 @@
+{
+    "name": "programster/abstract-view",
+    "type": "library",
+    "description": "An abstract view to make views easy.",
+    "keywords": ["views"],
+    "homepage": "https://github.com/programster/package-abstract-view",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stuart Page",
+            "email": "sdpagent@gamail.com",
+            "homepage": "https://blog.programster.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Programster\\AbstractView\\": "src/"
+        }
+    }
+}
