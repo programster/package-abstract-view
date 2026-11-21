@@ -14,11 +14,19 @@
         }
     ],
     "require": {
-        "php": ">=8.0.0"
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.3"
     },
     "autoload": {
         "psr-4": {
             "Programster\\AbstractView\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Programster\\AbstractView\\Testing\\": "testing/"
         }
     }
 }
