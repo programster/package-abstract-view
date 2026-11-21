@@ -1,8 +1,20 @@
 # Upgrading
 
+- [From 1.2.0 to 2.0.0](#from-120-to-200)
 - [From 1.1.1 to 1.2.0](#from-111-to-120)
 
 What changed in each release, and what, if anything, you need to change in your code when upgrading.
+
+## From 1.2.0 to 2.0.0
+`render()` now declares that it returns a `string`, and `renderContent()` that it returns `void`.
+
+**Changes you need to make:**
+
+- Add `: void` to every view's `renderContent()`, or PHP stops with a fatal error when the view's class is loaded:
+  `protected function renderContent() : void`. It must not `return` a value.
+- If a view overrides `render()`, add `: string` to it.
+
+Also tests the package on PHP 8.6.
 
 ## From 1.1.1 to 1.2.0
 You don't need to change any code, as long as you're on PHP 8.2 or newer.

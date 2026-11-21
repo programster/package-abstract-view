@@ -24,7 +24,7 @@ permissions:
 
 jobs:
     tests:
-        name: Lint, tests and PHPStan on PHP 8.2, 8.3, 8.4 and 8.5
+        name: Lint, tests and PHPStan on PHP 8.2, 8.3, 8.4, 8.5 and 8.6
         runs-on: ubuntu-latest
         timeout-minutes: 30
 

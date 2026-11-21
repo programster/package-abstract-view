@@ -13,7 +13,7 @@ abstract class AbstractView implements \Stringable
      *
      * @throws \LogicException - if the view closed the output buffer that this method opened for it.
      */
-    public function render()
+    public function render() : string
     {
         $startingLevel = ob_get_level();
         ob_start();
@@ -54,5 +54,5 @@ abstract class AbstractView implements \Stringable
      * Output the view's content.
      * @return void
      */
-    abstract protected function renderContent();
+    abstract protected function renderContent() : void;
 }

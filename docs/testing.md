@@ -5,7 +5,7 @@ or keep working on every version of PHP. A test fails if it throws, fails an `as
 or deprecation.
 
 ## Running them on every supported version of PHP
-This lints every file and runs the tests on PHP 8.2, 8.3, 8.4 and 8.5, each in its own Docker container, then runs
+This lints every file and runs the tests on PHP 8.2, 8.3, 8.4, 8.5 and 8.6, each in its own Docker container, then runs
 PHPStan once, on the lowest version. It's what the GitHub workflow runs, so a pass here means a pass there.
 
 ```bash

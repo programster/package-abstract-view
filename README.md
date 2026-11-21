@@ -21,7 +21,7 @@ the [Stringable interface](https://www.php.net/manual/en/class.stringable.php), 
 easily be passed around and used just as strings.
 
 ## Requirements
-PHP 8.2, 8.3, 8.4 or 8.5.
+PHP 8.2, 8.3, 8.4, 8.5 or 8.6.
 
 ## Installation
 ```bash

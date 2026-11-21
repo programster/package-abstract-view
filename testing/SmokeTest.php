@@ -152,5 +152,13 @@ final class SmokeTest
 
     # Accessors
     public function getNumPassed(): int { return $this->m_numPassed; }
-    public function getFailures(): array { return $this->m_failures; }
+
+    /**
+     * Get a description of each test that failed.
+     * @return list<string>
+     */
+    public function getFailures(): array
+    {
+        return $this->m_failures;
+    }
 }

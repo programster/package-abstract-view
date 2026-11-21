@@ -167,20 +167,11 @@ $testClosedBuffer = function () use ($checkLeavesNothing) : void {
 
 $smoke->run('a view that closes the buffer it renders to is refused', $testClosedBuffer);
 
-$testUntypedView = function () use ($checkLeavesNothing) : void {
-    $check = function () : void {
-        $view = new class extends AbstractView {
-            /** @return void */
-            protected function renderContent()
-            {
-                echo 'untyped';
-            }
-        };
-
-        SmokeTest::assertSame('untyped', $view->render(), 'a view with no return type');
-    };
-
-    $checkLeavesNothing($check);
+$testReturnTypes = function () : void {
+    $renderType = (string)(new ReflectionMethod(AbstractView::class, 'render'))->getReturnType();
+    $contentType = (string)(new ReflectionMethod(AbstractView::class, 'renderContent'))->getReturnType();
+    SmokeTest::assertSame('string', $renderType, 'the return type of render()');
+    SmokeTest::assertSame('void', $contentType, 'the return type of renderContent()');
 };
 
-$smoke->run('a view without a return type on renderContent() still works', $testUntypedView);
+$smoke->run('render() and renderContent() declare their return types', $testReturnTypes);
